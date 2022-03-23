@@ -1,31 +1,28 @@
 #include<stdio.h>
-#include<math.h>
 
-double Factorial(double a);
-void Factorial_Print(double a);
+int Factorial(int a);
+void Factorial_Print(int a);
 
 int main(){
+    //Factorial(5);
     //Factorial_Print(5);
 }
 
 
-double Factorial(double a){
-    double ans=a;
-    int i;
+int Factorial(int a){
+    int ans=0;
     
-    for(i=0;i==(a-1);i--){
-     ans=ans*i;
+    for(int i=1;i==(a-1);i++){
+     ans=a*(ans-i);
     }
     return ans;
 }
 
-void Factorial_Print(double a){
-    double ans=a;
-    int i;
-    
-    for(i=0;i==(a-1);i--){
-     ans=ans*i;
+void Factorial_Print(int a){
+    int ans=1;
+    for(int i=1;i<(a+1);i++){
+        ans=ans*i;
     }
-    printf("%lf\n",ans);
+    printf("%d\n",ans);
     
 }
